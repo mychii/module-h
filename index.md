@@ -8,9 +8,15 @@ title: Module H
 第42届世界技能大赛 网站设计 模块H 相关技术解析
 
 ## 评分指标
-* 为导航&幻灯片设计了全新的按钮，并且在hover/focus, click和normal三种状态下，按钮的观感会发生变化。
-* ["Continue reading…"链接展示了三个栏目的完整文本(“About”, “41st Competition”, “40th Competition”)并伴随动画效果。](#continueReading) 
-* [通过点击导航按钮，页面会平缓地滚动到各自的栏目。](#navbtn)
+1. 为导航&幻灯片设计了全新的按钮，并且在hover/focus, click和normal三种状态下，按钮的观感会发生变化。  
+	使用样式的[锚伪类](http://www.w3school.com.cn/css/css_pseudo_classes.asp)，或监听鼠标事件修改样式
+2. ["Continue reading…"链接展示了三个栏目的完整文本(“About”, “41st Competition”, “40th Competition”)并伴随动画效果。](#continueReading) 
+3. [通过点击导航按钮，页面会平缓地滚动到各自的栏目。](#navbtn)
+4. 栏目的背景被很好地设计了且同网站的主题吻合
+5. 幻灯上图片的效果能吸引用户的兴趣  
+	使用样式、动画实现，这个就靠个人发挥了
+6. 导航的观感有专业设计的色彩和拓扑结构
+7. ["Hand Symbol"通过动画到达3个栏目并且遵循提供的路径。](#symbol)
 
 <a name="continueReading"></a>
 
@@ -43,10 +49,9 @@ Continue reading…"链接展示了三个栏目的完整文本(“About”, “4
 <a name="navbtn"></a>
 
 ## 通过点击导航按钮，页面会平缓地滚动到各自的栏目
-这里需要掌握以下知识点
 
 1. 获取某个对象在页面的坐标  
-通过元素的『offsetTop』属性可以获取对象相对于版面或由『offsetTop』属性指定的父坐标的计算顶端位置   
+通过元素的"offsetTop"属性可以获取对象相对于版面或由"offsetTop"属性指定的父坐标的计算顶端位置   
 如：
 
 		var offsetTop = document.getElementById("id").offsetTop;
@@ -70,3 +75,15 @@ Continue reading…"链接展示了三个栏目的完整文本(“About”, “4
             else
                 scrollTo(0, start += step);
         }, 1);
+
+<a name="symbol"></a>
+
+## "Hand Symbol"通过动画到达3个栏目并且遵循提供的路径
+
+1. 注册监听事件，在页面滚动的时候做些什么
+
+	    $(window).addEventListener('scroll', function(e) {
+            //do something
+		});
+
+2. 未完待续。。。
