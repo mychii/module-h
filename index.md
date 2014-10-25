@@ -107,7 +107,7 @@ Continue reading…"链接展示了三个栏目的完整文本(“About”, “4
 
 1. 注册监听事件，在页面滚动的时候做些什么。
 
-	    $(window).addEventListener('scroll', function(e) {
+	    window.addEventListener('scroll', function(e) {
             //do something
 		});
 
